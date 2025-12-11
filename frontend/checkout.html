@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Checkout • ApexcifyTechnologys</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="navbar"></header>
+
+      <main class="app-main">
+        <div class="section-header">
+          <div>
+            <div class="section-title">Secure Checkout</div>
+            <div class="section-subtitle">
+              Complete your order with encrypted payment and verified vendors.
+            </div>
+          </div>
+        </div>
+
+        <section class="detail-layout">
+          <div class="card">
+            <h3>Order summary</h3>
+            <table class="table" id="summaryTable">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Qty</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody id="summaryBody"></tbody>
+            </table>
+            <div style="margin-top: 0.8rem; display:flex; justify-content:space-between;">
+              <strong>Total:</strong>
+              <span id="summaryTotal">₹0</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Billing & Shipping</h3>
+            <p id="checkoutError" class="text-danger"></p>
+            <form id="checkoutForm">
+              <div style="display:grid; gap:0.7rem; margin-top:0.5rem;">
+                <div>
+                  <label>Full name</label>
+                  <input type="text" id="name" class="input" required />
+                </div>
+                <div>
+                  <label>Email</label>
+                  <input type="email" id="email" class="input" required />
+                </div>
+                <div>
+                  <label>Shipping address</label>
+                  <textarea id="address" class="input" rows="3" required></textarea>
+                </div>
+                <div>
+                  <label>Payment method</label>
+                  <select id="paymentMethod" class="select" required>
+                    <option value="">Select</option>
+                    <option value="COD">Cash on Delivery</option>
+                    <option value="Card">Credit / Debit Card</option>
+                    <option value="UPI">UPI</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top:1rem;">
+                Place order
+              </button>
+              <p style="font-size:0.75rem; color:var(--muted); margin-top:0.4rem;">
+                By placing your order, you agree to ApexcifyTechnologys terms &
+                policies.
+              </p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        © <span id="year"></span> ApexcifyTechnologys.
+      </footer>
+    </div>
+
+    <script type="module" src="js/checkout.js"></script>
+  </body>
+</html>

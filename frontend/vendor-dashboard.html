@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vendor Dashboard • ApexcifyTechnologys</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="navbar"></header>
+
+      <main class="app-main">
+        <div class="section-header">
+          <div>
+            <div class="section-title">Vendor Dashboard</div>
+            <div class="section-subtitle">
+              Manage your catalog in real-time with ApexcifyTechnologys.
+            </div>
+          </div>
+        </div>
+
+        <section class="detail-layout">
+          <!-- Product form -->
+          <div class="card">
+            <h3>Add / Edit Product</h3>
+            <p id="vendorFormError" class="text-danger"></p>
+            <form id="productForm">
+              <input type="hidden" id="productId" />
+              <div style="display: grid; gap: 0.7rem; margin-top: 0.5rem">
+                <div>
+                  <label>Name</label>
+                  <input type="text" id="name" class="input" required />
+                </div>
+                <div>
+                  <label>Description</label>
+                  <textarea
+                    id="description"
+                    class="input"
+                    rows="3"
+                    required
+                  ></textarea>
+                </div>
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 0.6rem;
+                  "
+                >
+                  <div>
+                    <label>Price (₹)</label>
+                    <input
+                      type="number"
+                      id="price"
+                      class="input"
+                      min="1"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label>Stock</label>
+                    <input
+                      type="number"
+                      id="stock"
+                      class="input"
+                      min="0"
+                      required
+                    />
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 0.6rem;
+                  "
+                >
+                  <div>
+                    <label>Category</label>
+                    <input
+                      type="text"
+                      id="category"
+                      class="input"
+                      placeholder="electronics, fashion..."
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label>Image URL</label>
+                    <input type="text" id="image" class="input" />
+                  </div>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="margin-top: 1rem"
+              >
+                <span id="formButtonText">Create product</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Product list -->
+          <div class="card">
+            <h3>Your Products</h3>
+            <p id="vendorError" class="text-danger"></p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Rating</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="vendorProducts"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        © <span id="year"></span> ApexcifyTechnologys.
+      </footer>
+    </div>
+
+    <script type="module" src="js/vendor.js"></script>
+  </body>
+</html>

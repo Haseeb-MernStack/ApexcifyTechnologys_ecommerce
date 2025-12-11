@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cart • ApexcifyTechnologys</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="navbar"></header>
+
+      <main class="app-main">
+        <div class="section-header">
+          <div>
+            <div class="section-title">Your Cart</div>
+            <div class="section-subtitle">
+              Review your items and proceed to a secure checkout.
+            </div>
+          </div>
+        </div>
+
+        <section class="card">
+          <table class="table" id="cartTable">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th style="width: 110px;">Quantity</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cartBody"></tbody>
+          </table>
+
+          <p id="cartEmpty" style="display: none;">Your cart is empty.</p>
+
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-top: 1rem;
+            "
+          >
+            <div>
+              <strong>Subtotal: </strong>
+              <span id="cartTotal">₹0</span>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="index.html" class="btn btn-ghost btn-sm">Continue shopping</a>
+              <a href="checkout.html" class="btn btn-primary btn-sm" id="checkoutBtn"
+                >Proceed to checkout</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        © <span id="year"></span> ApexcifyTechnologys.
+      </footer>
+    </div>
+
+    <script type="module" src="js/cartPage.js"></script>
+  </body>
+</html>

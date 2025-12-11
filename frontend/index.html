@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ApexcifyTechnologys – Premium Ecommerce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="navbar"></header>
+
+      <main class="app-main">
+        <section class="hero">
+          <div class="hero-content">
+            <h1>
+              Elevate your
+              <span class="hero-highlight">Shopping Experience</span>
+            </h1>
+            <p class="hero-subtitle">
+              Curated products from trusted vendors, lightning-fast checkout,
+              and a dashboard built for serious ecommerce.
+            </p>
+
+            <div class="hero-badges">
+              <span class="hero-badge">Secure • JWT Auth</span>
+              <span class="hero-badge">Vendors &amp; Admin Panel</span>
+              <span class="hero-badge">MongoDB • Express • Node</span>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#products" class="btn btn-primary">Browse Products</a>
+              <a href="vendor-dashboard.html" class="btn btn-ghost"
+                >Vendor Dashboard</a
+              >
+            </div>
+          </div>
+
+          <aside class="hero-card">
+            <div class="hero-card-grid">
+              <div class="hero-stat">
+                <div class="hero-stat-label">Live Orders</div>
+                <div class="hero-stat-value">124</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Vendors</div>
+                <div class="hero-stat-value">32</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Avg. Rating</div>
+                <div class="hero-stat-value">4.8★</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Delivery</div>
+                <div class="hero-stat-value">24h Express</div>
+              </div>
+            </div>
+            <div class="hero-float"></div>
+          </aside>
+        </section>
+
+        <section id="products">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Featured Products</div>
+              <div class="section-subtitle">
+                Hand-picked items from verified ApexcifyTechnologys vendors.
+              </div>
+            </div>
+            <div class="filters">
+              <button class="chip chip--active" data-category="">All</button>
+              <button class="chip" data-category="electronics">
+                Electronics
+              </button>
+              <button class="chip" data-category="fashion">Fashion</button>
+              <button class="chip" data-category="home">Home</button>
+            </div>
+          </div>
+
+          <div id="productGrid" class="product-grid"></div>
+          <p id="productError" class="text-danger"></p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        © <span id="year"></span> ApexcifyTechnologys. Crafted for premium
+        internship submissions.
+      </footer>
+    </div>
+
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>

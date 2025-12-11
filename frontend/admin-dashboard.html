@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard • ApexcifyTechnologys</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="navbar"></header>
+
+      <main class="app-main">
+        <div class="section-header">
+          <div>
+            <div class="section-title">Admin Control Center</div>
+            <div class="section-subtitle">
+              Monitor users, orders, and keep the marketplace healthy.
+            </div>
+          </div>
+        </div>
+
+        <section class="detail-layout">
+          <!-- Users -->
+          <div class="card">
+            <h3>Users</h3>
+            <p id="adminUsersError" class="text-danger"></p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Created</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="adminUsersBody"></tbody>
+            </table>
+          </div>
+
+          <!-- Orders -->
+          <div class="card">
+            <h3>Orders</h3>
+            <p id="adminOrdersError" class="text-danger"></p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="adminOrdersBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        © <span id="year"></span> ApexcifyTechnologys.
+      </footer>
+    </div>
+
+    <script type="module" src="js/admin.js"></script>
+  </body>
+</html>
